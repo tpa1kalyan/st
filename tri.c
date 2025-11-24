@@ -1,21 +1,27 @@
-# Program to check type of triangle (with max input = 10)
+#include <stdio.h>
 
-# Take input from user
-a = int(input("Enter side a (max 10): "))
-b = int(input("Enter side b (max 10): "))
-c = int(input("Enter side c (max 10): "))
+int main() {
+    int a, b, c;
 
-# Check if inputs are in valid range
-if a <= 0 or b <= 0 or c <= 0 or a > 10 or b > 10 or c > 10:
-    print("Out of range values")
-else:
-    # Check triangle inequality
-    if a + b > c and a + c > b and b + c > a:
-        if a == b == c:
-            print("Equilateral triangle")
-        elif a == b or b == c or a == c:
-            print("Isosceles triangle")
-        else:
-            print("Scalene triangle")
-    else:
-        print("Triangle cannot be formed")
+    printf("Enter side a (max 10): ");
+    scanf("%d", &a);
+    printf("Enter side b (max 10): ");
+    scanf("%d", &b);
+    printf("Enter side c (max 10): ");
+    scanf("%d", &c);
+
+    if (a <= 0 || b <= 0 || c <= 0 || a > 10 || b > 10 || c > 10) {
+        printf("Out of range values\n");
+    } else if (a + b > c && a + c > b && b + c > a) {
+        if (a == b && b == c)
+            printf("Equilateral triangle\n");
+        else if (a == b || b == c || a == c)
+            printf("Isosceles triangle\n");
+        else
+            printf("Scalene triangle\n");
+    } else {
+        printf("Triangle cannot be formed\n");
+    }
+
+    return 0;
+}
