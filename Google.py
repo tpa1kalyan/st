@@ -1,4 +1,3 @@
-https://github.com/tpa1kalyan/wealth-compass.git
 from selenium import webdriver
 import time
 from selenium.webdriver.common.by import By
@@ -24,4 +23,3 @@ if __name__ == "__main__":
     g.setup()
     g.search_loacction()
     g.teardown()
-https://github.com/tpa1kalyan/wealth-compass.git
